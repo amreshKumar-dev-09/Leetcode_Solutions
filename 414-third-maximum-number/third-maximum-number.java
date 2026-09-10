@@ -7,20 +7,18 @@ class Solution {
 
         for(int i = 0; i < nums.length; i++) {
 
-            if(nums[i] == largest || nums[i] == secondLargest || nums[i] == thirdLargest) {
-                continue;
-            }
-
-            if(nums[i] > largest) {
+            if(nums[i] > largest){
                 thirdLargest = secondLargest;
                 secondLargest = largest;
                 largest = nums[i];
             }
-            else if(nums[i] > secondLargest) {
-                thirdLargest = secondLargest;
+
+            else if(nums[i] < largest && nums[i] > secondLargest){
+                thirdLargest =  secondLargest;
                 secondLargest = nums[i];
             }
-            else if(nums[i] > thirdLargest) {
+
+            else if(nums[i] < largest && nums[i] < secondLargest && nums[i] > thirdLargest){
                 thirdLargest = nums[i];
             }
         }
