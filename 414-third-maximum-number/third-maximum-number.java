@@ -1,7 +1,7 @@
 class Solution {
     public int thirdMax(int[] nums) {
 
-        long largest = Long.MIN_VALUE;
+        long largest = nums[0];
         long secondLargest = Long.MIN_VALUE;
         long thirdLargest = Long.MIN_VALUE;
 
